@@ -15,8 +15,8 @@ const fetchingfaculty = (request, response) => {
 
     let str = request.params.admin.toString();
     console.log(str);
-    // console.log(request.params.email);
-    // console.log(request.params.password);
+    console.log(request.params.email);
+    console.log(request.params.password);
 
     let sqlquery = `select fid,femail,fpassword,adminpermission from faculty where femail='${request.params.email}' AND fpassword='${request.params.password}' AND adminpermission='${str}'`;
     db.query(sqlquery, (err, data) => {
