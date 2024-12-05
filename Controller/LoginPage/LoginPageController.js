@@ -28,7 +28,7 @@ const fetchingfaculty = (request, response) => {
             for (let i = 0; i < data.length; i++) {
                 if (request.params.email === data[i].femail && request.params.password === data[i].fpassword && str === data[i].adminpermission) {
                     console.log(typeof (data[i].fpassword));
-                    console.log("valid");
+                    // console.log("valid");
                     response.json({ msg: "ValidUserandadmin", fid: data[0].fid });
                 }
             }
